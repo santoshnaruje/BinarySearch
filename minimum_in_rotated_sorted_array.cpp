@@ -23,7 +23,7 @@ class Solution
                 continue;
             }
 
-            if (nums[mid]<nums[high])
+            if (nums[mid] > nums[high])
             {
                 low = mid+1;
             } else
@@ -43,7 +43,7 @@ class Solution
         while (low<high)
         {
             int mid= low + (high-low)/2;
-            if (nums[mid]<nums[high])
+            if (nums[mid]>nums[high])
             {
                 low = mid+1;
             } else
@@ -59,7 +59,7 @@ class Solution
 
 int main()
 {
-    vector<int> nums = {4,5,6,7,0,1,2,3};
+    vector<int> nums = {4,5,1,2,3};
     Solution s;
     cout<<s.getMinimumElementInArotatedSortedArray(nums)<< endl;
 }
